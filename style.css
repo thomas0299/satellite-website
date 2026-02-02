@@ -27,6 +27,12 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+.site-subheading {
+    margin: 0 0 1.75rem;
+    font-size: 1.1rem;
+    color: #dfe6e9;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -78,4 +84,167 @@ footer {
     text-align: center;
     padding: 2rem 0;
     margin-top: 3rem;
+}
+/* Organizer Cards */
+.organizer-card {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.organizer-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.organizer-photo img {
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.organizer-info h4 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.organizer-info p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.organizer-info a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.organizer-info a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Logos Section */
+.logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-items: center;
+}
+
+.logo-placeholder img {
+    border-radius: 8px;
+    border: none;
+}
+
+/* Schedule Table */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.schedule-table thead {
+    background: #f8f9fa;
+}
+
+.schedule-table th {
+    padding: 1rem 2rem;
+    text-align: left;
+    font-weight: 600;
+    color: #2c3e50;
+    border: none;
+}
+
+.schedule-table td {
+    padding: 1rem 2rem;
+    border: none;
+    vertical-align: top;
+}
+
+.schedule-table tbody tr {
+    background: #fff;
+    transition: background 0.2s;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.schedule-table tbody tr:hover {
+    background: #e9ecef;
+}
+
+.schedule-table .time {
+    font-weight: 600;
+    color: #2c3e50;
+    white-space: nowrap;
+    min-width: 120px;
+}
+
+.schedule-table .talk-title {
+    font-weight: 500;
+    color: #333;
+    min-width: 250px;
+}
+
+.schedule-table .speaker {
+    color: #555;
+}
+
+.schedule-table .speaker-placeholder {
+    font-weight: 500;
+    color: #333;
+}
+
+.schedule-table .affiliation {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 0.25rem;
+}
+
+.schedule-table .talk-type {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+}
+
+.break-section {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #fff3cd;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.break-section h3 {
+    color: #856404;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .organizer-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
